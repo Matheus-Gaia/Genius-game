@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    background: linear-gradient(90deg, rgba(100,98,107,1) 0%, rgba(228,215,215,1) 51%, rgba(100,98,107,1) 100%);
+}
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score, .round {
+    align-self: flex-start;
+    margin-top: 15px;
+    font-size: 1.8rem;
+}
+
+.game {
+    display: grid;
+    grid-template-areas: 
+    "gr ye"
+    "re bl";
+    grid-gap: 10px;
+    background-color: rgb(39, 37, 37);
+    border-radius: 50%;
+    width: 550px;
+    height: 580px;
+    padding: 20px;
+}
+
+.green {
+    grid-area: gr;
+    background-color: green;
+    border-top-left-radius: 100%;
+    
+}
+
+.yellow {
+    grid-area: ye;
+    background-color: yellow;
+    border-top-right-radius: 100%;
+    
+}
+
+.blue {
+    grid-area: bl;
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+    
+}
+
+.red {
+    grid-area: re;
+    background-color: red;
+    border-bottom-left-radius: 100%;
+    
+}
+
+.blink {
+    opacity: 0.5;
+}
