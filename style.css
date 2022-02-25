@@ -28,13 +28,27 @@ body {
     width: 550px;
     height: 580px;
     padding: 20px;
+    box-shadow: 1px 0px 15px 4px #000000;
+}
+
+.start {
+    margin-right: 35px;
+    background-color: rgb(39, 37, 37);
+    color: antiquewhite;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 5px 5px 10px 5px #000000;;
+}
+
+.start:hover {
+    background-color: rgba(56, 47, 47, 0.699);
+    cursor: pointer;
 }
 
 .green {
     grid-area: gr;
     background-color: green;
     border-top-left-radius: 100%;
-    
 }
 
 .yellow {

@@ -21,6 +21,9 @@ const s_red = document.getElementById('s_red')
 const round = document.querySelector('.round');
 const score = document.querySelector('.score');
 
+const button = document.querySelector('.start')
+
+round.innerHTML = `Round: ${randomOrder.length}`
 
 const shuffler = () => {
     let colorNumber = Math.floor(Math.random() * 4)
@@ -93,7 +96,8 @@ const playerClick = (color, colorNumber, sound) => {
 
 const gameOver = () => {
     alert(`POINTS: ${points}`)
-    startGame();
+    randomOrder = []
+    round.innerHTML = `Round: ${randomOrder.length}`
 }
 
 const bestScore = (length) => {
@@ -108,12 +112,13 @@ const startGame = () => {
     randomOrder = []
     round.innerHTML = `Round: ${randomOrder.length}`
     setTimeout(() => {
-        alert("START")
         shuffler()
     }, 1000)
 }
 
-window.onload = startGame()
+button.addEventListener('click', () => {
+    startGame()
+})
 
 green.onclick = () => playerClick(green, 0, s_green)
 yellow.onclick = () => playerClick(yellow, 1, s_yellow)
